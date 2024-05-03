@@ -27,7 +27,7 @@ export const Header = () => {
 
     // useEffect(() => {
     //     if (search && auth.token) {
-    //         getDataApi(`search?userName=${search}`, auth.token)
+    //         getDataApi(search?userName=${search}, auth.token)
     //             .then(res => setUsers(res.data.users))
     //             .catch(err => {
     //                 dispatch({
@@ -101,7 +101,7 @@ export const Header = () => {
             </form>
 
             <div className='header-left'>
-                <Link to={`profile/${auth.user._id}`}>
+                <Link to={`/profile/${auth.user._id}`}>
                     <div className='header-leftAvatar'>
                         <Avatar src={auth.user.avatar} />
                         <h5 style={{ color: 'white' }}>{auth.user.fullName}</h5>
